@@ -39,6 +39,8 @@ if check_birthday():
             with open(f"ready_to_send/letter_for_{name}.txt", "w") as created:
                 created.write(new_letter)
 # 4. Send the letter generated in step 3 to that person's email address.
+if not os.path.exists("ready_to_send"):
+    os.mkdir("ready_to_send")
 path = "./ready_to_send"
 email = "your email address"
 password_email = getpass.getpass("Password: ")
