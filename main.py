@@ -5,6 +5,8 @@ import pandas
 import os, glob
 import getpass
 
+
+os.mkdir("ready_to_send")
 # 1. Update the birthdays.csv
 
 # 2. Check if today matches a birthday in the birthdays.csv
@@ -15,7 +17,7 @@ birthday = [month, day]
 data = pandas.read_csv("birthdays.csv")
 birthdays_dates = data.to_dict(orient="records")
 birthday_names = []
-os.mkdir("ready_to_send")
+
 
 def check_birthday():
     for items in birthdays_dates:
